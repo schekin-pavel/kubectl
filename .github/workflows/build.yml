@@ -24,4 +24,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ github.repository }}/my-kubectl-image:latest
+        tags: ghcr.io/${{ github.repository }}/kubectl:latest
