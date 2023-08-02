@@ -16,7 +16,7 @@ jobs:
       with:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
-        password: ${{ secrets.GHCR_TOKEN }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build and push
       id: docker_build
@@ -24,4 +24,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ github.repository_owner }}/my-kubectl-image:latest
+        tags: ghcr.io/${{ github.repository }}/my-kubectl-image:latest
